@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-yellow-50 text-gray-800 flex flex-col min-h-screen">
+
+  <header class="bg-white shadow sticky top-0 z-50">
+  <div class="container mx-auto px-6 py-4 flex flex-wrap items-center justify-between">
+  
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-store text-yellow-500 text-2xl"></i>
+      <span class="text-xl font-bold text-gray-800">KamukunjiFinds</span>
+    </div>
+
+  
+    <nav class="w-full md:w-auto mt-4 md:mt-0 flex flex-col md:flex-row md:space-x-6 text-sm font-medium text-gray-700">
+      <a href="index.html" class="py-1 md:py-0 hover:text-yellow-500">Home</a>
+      <a href="allproducts.html" class="py-1 md:py-0 hover:text-yellow-500">Products</a>
+      <a href="cart.html" class="py-1 md:py-0 hover:text-yellow-500"><i class="fas fa-shopping-cart text-xl"></i></a>
+      <a href="about.html" class="py-1 md:py-0 hover:text-yellow-500">About</a>
+      <a href="vendor.html" class="py-1 md:py-0 hover:text-yellow-500">Vendors</a>
+      <a href="contact.html" class="py-1 md:py-0 hover:text-yellow-500">Contact</a>
+    </nav>
+  </div>
+</header>
+
+ 
+  <main class="flex-grow">
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden md:flex my-10">
+      <div class="md:w-1/2">
+        <img class="object-cover w-full h-full" src="shoe.jpg" alt="Product Image">
+      </div>
+
+      <div class="p-8 md:w-1/2 flex flex-col justify-between">
+        <div>
+          <h2 class="text-2xl font-bold mb-2 text-yellow-600">New Balance 530</h2>
+          <p class="text-lg text-gray-800 font-semibold mb-2">Price: KSh 1,200</p>
+          <p class="text-sm text-gray-600 mb-2">Location: Nairobi, Kenya</p>
+          <p class="text-gray-700 leading-relaxed mb-4">The New Balance 530 is a retro-style sneaker with a comfortable fit and trendy design. Perfect for casual outings or stylish streetwear vibes.</p>
+          <button class="flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded mb-4">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="flex items-center text-sm text-gray-700 font-medium mb-4">
+          <i class="fas fa-star text-yellow-500 mr-1"></i>
+          <span class="font-bold">4.6 (30 reviews)</span>
+        </div>
+
+        <div class="mt-4 space-y-2">
+          <p class="text-sm text-gray-600">Contact Seller:</p>
+          <p><strong>Phone:</strong> <a href="tel:+254712345678" class="text-yellow-600 hover:underline">+254 712 345 678</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/254712345678" class="text-yellow-600 hover:underline">Chat on WhatsApp</a></p>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="font-bold text-2xl mt-16 text-center">Related Products</h1>
+
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-10 mx-auto">
+        <div class="flex flex-wrap -m-4">
+
+         
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="dunks.jpg">
+            </a>
+            <div class="mt-4">
+              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Nike Dunks</h2>
+              <p class="text-yellow-600 font-medium text-base leading-tight">KSh 2,500</p>
+              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
+                View Shop
+              </a>
+              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span>4.6 <span class="text-gray-500">(23)</span></span>
+              </div>
+            </div>
+          </div>
+
+        
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="sports.jpg">
+            </a>
+            <div class="mt-4">
+              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Gym Shoes</h2>
+              <p class="text-yellow-600 font-medium text-base leading-tight">KSh 2,800</p>
+              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
+                View Shop
+              </a>
+              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span>4.6 <span class="text-gray-500">(23)</span></span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="stripes.jpg">
+            </a>
+            <div class="mt-4">
+              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Brown Shoes</h2>
+              <p class="text-yellow-600 font-medium text-base leading-tight">KSh 3,600</p>
+              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
+                View Shop
+              </a>
+              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span>4.6 <span class="text-gray-500">(23)</span></span>
+              </div>
+            </div>
+          </div>
+
+         
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="airforce.jpg">
+            </a>
+           <div class="mt-4">
+              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Airforce One</h2>
+              <p class="text-yellow-600 font-medium text-base leading-tight">KSh 2,500</p>
+              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
+                View Shop
+              </a>
+              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span>4.6 <span class="text-gray-500">(23)</span></span>
+              </div>
+            </div>
+          </div>
+
+        
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="brown.jpg">
+            </a>
+            <div class="mt-4">
+              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Sport Shoes</h2>
+              <p class="text-yellow-600 font-medium text-base leading-tight">KSh 2,900</p>
+              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
+                View Shop
+              </a>
+              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span>4.6 <span class="text-gray-500">(23)</span></span>
+              </div>
+            </div>
+          </div>
+
+         
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="highcut.jpg">
+            </a>
+           <div class="mt-4">
+              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Nike Jordan</h2>
+              <p class="text-yellow-600 font-medium text-base leading-tight">KSh 3,500</p>
+              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
+                View Shop
+              </a>
+              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span>4.6 <span class="text-gray-500">(23)</span></span>
+              </div>
+            </div>
+          </div>
+
+         
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="black.jpg">
+            </a>
+<div class="mt-4">
+              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Men"s Shoes</h2>
+              <p class="text-yellow-600 font-medium text-base leading-tight">KSh 3,900</p>
+              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
+                View Shop
+              </a>
+              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span>4.6 <span class="text-gray-500">(23)</span></span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="brown2.jpg">
+            </a>
+            <div class="mt-4">
+              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Women Wear</h2>
+              <p class="text-yellow-600 font-medium text-base leading-tight">KSh 3,200</p>
+              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
+                View Shop
+              </a>
+              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span>4.6 <span class="text-gray-500">(23)</span></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-yellow-100 text-yellow-800 py-8 mt-10">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div>
+      <h4 class="text-lg font-semibold mb-2">Contact Us</h4>
+      <p class="text-sm">KamukunjiFinds</p>
+      <p class="text-sm">Email: support@kamukunjifinds.com</p>
+      <p class="text-sm">Phone: +254 712 345678</p>
+      <p class="text-sm">Nairobi, Kenya</p>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/about.html" class="hover:text-yellow-600">About Us</a></li>
+        <li><a href="/register.html" class="hover:text-yellow-600">Register</a></li>
+        <li><a href="/contact.html" class="hover:text-yellow-600">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-2">Stay Connected</h4>
+      <p class="text-sm mb-4">Follow us for updates, offers, and more.</p>
+      <div class="text-sm text-yellow-700 mt-4">
+        &copy; 2025 KamukunjiFinds. All rights reserved.
+      </div>
+    </div>
+
+  </div>
+</footer>
+  
+  </footer>
+
+</body>
+</html>
+
+
+
