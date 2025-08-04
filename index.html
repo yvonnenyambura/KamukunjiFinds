@@ -3,9 +3,68 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KamukunjiFinds - Home</title>
+  <title>KamukunjiFinds</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+  .tabs-section {
+    font-family: sans-serif;
+    padding: 2rem;
+    background: #f9fafb;
+  }
+
+  .tabs-section .tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .tabs-section .tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+  }
+
+  .tabs-section .tab input {
+    display: none;
+  }
+
+  .tabs-section .tab label {
+    background: #fde68a;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tabs-section .tab input:checked + label {
+    background: #facc15;
+  }
+
+  .tabs-section .tab-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #F8FAFC;
+    padding: 0 1rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 0 0 5px 5px;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    width: 100%;
+  }
+
+  .tabs-section .tab input:checked + label + .tab-content {
+    max-height: 200px;
+    padding: 1rem;
+  }
+</style>
+
 </head>
 <body class="bg-yellow-50 text-gray-800 flex flex-col min-h-screen">
 
@@ -21,10 +80,10 @@
     <nav class="w-full md:w-auto mt-4 md:mt-0 flex flex-col md:flex-row md:space-x-6 text-sm font-medium text-gray-700">
       <a href="index.html" class="py-1 md:py-0 hover:text-yellow-500">Home</a>
       <a href="allproducts.html" class="py-1 md:py-0 hover:text-yellow-500">Products</a>
-      <a href="cart.html" class="py-1 md:py-0 hover:text-yellow-500"><i class="fas fa-shopping-cart text-xl"></i></a>
       <a href="about.html" class="py-1 md:py-0 hover:text-yellow-500">About</a>
       <a href="vendor.html" class="py-1 md:py-0 hover:text-yellow-500">Vendors</a>
       <a href="contact.html" class="py-1 md:py-0 hover:text-yellow-500">Contact</a>
+      <a href="cart.html" class="py-1 md:py-0 hover:text-yellow-500"><i class="fas fa-shopping-cart text-xl"></i></a>
     </nav>
   </div>
 </header>
@@ -35,175 +94,135 @@
     <p class="text-gray-700 mt-2">Affordable, quality, and trendy products directly from vendors</p>
   </section>
 
-
-  <section class="py-10 bg-white">
-    <div class="container mx-auto px-6">
-      <h3 class="text-2xl font-semibold text-center text-yellow-600 mb-6">Shop by Category</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="p-4 bg-yellow-50 rounded shadow hover:bg-yellow-500 hover:text-white transition duration-300 cursor-pointer">
-          <i class="fas fa-shoe-prints text-3xl mb-2"></i>
-          <p class="font-medium">Footwear</p>
-        </div>
-        <div class="p-4 bg-yellow-50 rounded shadow hover:bg-yellow-500 hover:text-white transition duration-300 cursor-pointer">
-          <i class="fas fa-tshirt text-3xl mb-2"></i>
-          <p class="font-medium">Clothing</p>
-        </div>
-        <div class="p-4 bg-yellow-50 rounded shadow hover:bg-yellow-500 hover:text-white transition duration-300 cursor-pointer">
-          <i class="fas fa-tv text-3xl mb-2"></i>
-          <p class="font-medium">Electronics</p>
-        </div>
-        <div class="p-4 bg-yellow-50 rounded shadow hover:bg-yellow-500 hover:text-white transition duration-300 cursor-pointer">
-          <i class="fas fa-couch text-3xl mb-2"></i>
-          <p class="font-medium">Home & Living</p>
-        </div>
+<div class="tabs-section">
+  <div class="tab-container">
+    <div class="tab">
+      <input type="checkbox" id="tab1">
+      <label for="tab1">Featured</label>
+      <div class="tab-content">
+      <ul class="list-disc ml-5">
+    <li>Portable Blender</li>
+    <li>3pc Cooking Pots</li>
+    <li>Foldable Laptop Stand</li>
+    <li>Water Dispenser Pump</li>
+    <li><a href="allproducts.html" class="text-yellow-600 underline">See more...</a></li>
+  </ul>
       </div>
     </div>
-  </section>
 
-  <section class="bg-white py-6">
-  <div class="container mx-auto px-6">
-    <div class="max-w-2xl mx-auto">
-      <div class="flex items-center border border-yellow-400 rounded overflow-hidden shadow-sm focus-within:ring-2 focus-within:ring-yellow-400 transition-all">
-        <input type="text" placeholder="Search products" class="w-full px-4 py-2 focus:outline-none text-sm focus:ring-0 bg-white">
-        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2">
-          <i class="fas fa-search"></i>
-        </button>
+    <div class="tab">
+      <input type="checkbox" id="tab2">
+      <label for="tab2">New Arrivals!</label>
+      <div class="tab-content">
+  <ul class="list-disc ml-5">
+    <li>Wireless Ring Light</li>
+    <li>Mini Air Humidifier</li>
+    <li>USB Table Fan</li>
+    <li>Silicone Kitchen Utensil Set</li>
+    <li><a href="allproducts.html" class="text-yellow-600 underline">See more...</a></li>
+  </ul>
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="checkbox" id="tab3">
+      <label for="tab3">Deals and Offers!</label>
+      <div class="tab-content">
+        <ul class="list-disc ml-5">
+    <li>Buy 1 Get 1 Flask</li>
+    <li>30% Off Torch</li>
+    <li>Combo: Electric Kettle</li>
+    <li>Power Cables Sale</li>
+    <li><a href="allproducts.html" class="text-yellow-600 underline">See more...</a></li>
+  </ul>
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="checkbox" id="tab4">
+      <label for="tab4">Electronics</label>
+      <div class="tab-content">
+       <ul class="list-disc ml-5">
+    <li>Bluetooth Earbuds</li>
+    <li>LED Desk Lamp with USB</li>
+    <li>Fast Charging Adapter</li>
+    <li>Wireless Mouse</li>
+    <li><a href="allproducts.html" class="text-yellow-600 underline">See more...</a></li>
+  </ul>
       </div>
     </div>
   </div>
-</section>
+</div>
+  
 
  <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap -m-4">
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      
+      
+      <div class="bg-yellow-200 hover:bg-yellow-500 rounded shadow-md">
         <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="bowls.jpg">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="appliances.jpg">
         </a>
-        <div class="mt-4">
-              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Dining set</h2>
-              <p class="text-yellow-600 font-medium text-base leading-tight">KSh 2,500</p>
-              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
-                View Shop
-              </a>
-              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
-                <i class="fas fa-star text-yellow-500 mr-1"></i>
-                <span>4.6 <span class="text-gray-500">(23)</span></span>
-              </div>
-            </div>
+        <div class="mt-4 flex flex-col items-center text-center space-y-2">
+  <h2 class="text-gray-900 text-xl font-bold">Electronics and Appliances</h2>
+  <p class="text-gray-600 text-sm">Essential tech and home solutions,all in one place.</p>
+  <a href="appliances.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition duration-300">Shop Now</a>
+</div>
 
       </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+
+      <div class="bg-yellow-200 hover:bg-yellow-500 p-4 rounded shadow-md">
         <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="duvet.jpg">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="fashion.jpg">
         </a>
-        <div class="mt-4">
-              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Quality Grey Duvet</h2>
-              <p class="text-yellow-600 font-medium text-base leading-tight">KSh2,000</p>
-              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
-                View Shop
-              </a>
-              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
-                <i class="fas fa-star text-yellow-500 mr-1"></i>
-                <span>4.6 <span class="text-gray-500">(23)</span></span>
-              </div>
-            </div>
+         <div class="mt-4 flex flex-col items-center text-center space-y-2">
+  <h2 class="text-gray-900 text-xl font-bold">Fashion and Accessories</h2>
+  <p class="text-gray-600 text-sm">Style that fits every vibe.</p>
+  <a href="appliances.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition duration-300">Shop Now</a>
+</div>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+      <div class="bg-yellow-200 hover:bg-yellow-500 p-4 rounded shadow-md">
         <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="samsung.jpg">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="kitchen.jpg">
         </a>
-        <div class="mt-4">
-              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Samsung S24 Ultra</h2>
-              <p class="text-yellow-600 font-medium text-base leading-tight">KSh150,000</p>
-              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
-                View Shop
-              </a>
-              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
-                <i class="fas fa-star text-yellow-500 mr-1"></i>
-                <span>4.6 <span class="text-gray-500">(23)</span></span>
-              </div>
-            </div>
+        <div class="mt-4 flex flex-col items-center text-center space-y-2">
+  <h2 class="text-gray-900 text-xl font-bold">Kitchenware</h2>
+  <p class="text-gray-600 text-sm">Essential picks for every modern home.</p>
+  <a href="appliances.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition duration-300">Shop Now</a>
+</div>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+
+     <div class="bg-yellow-200 hover:bg-yellow-500 p-4 rounded shadow-md">
         <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="fridge.jpg">
-        </a>
-        <div class="mt-4">
-              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Fridge</h2>
-              <p class="text-yellow-600 font-medium text-base leading-tight">KSh36,000</p>
-              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
-                View Shop
-              </a>
-              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
-                <i class="fas fa-star text-yellow-500 mr-1"></i>
-                <span>4.6 <span class="text-gray-500">(23)</span></span>
-              </div>
-            </div>
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="storage.jpg"></a>
+        <div class="mt-4 flex flex-col items-center text-center space-y-2">
+  <h2 class="text-gray-900 text-xl font-bold">Furniture and Storage</h2>
+  <p class="text-gray-600 text-sm">Smart storage and stylish furniture pieces.</p>
+  <a href="appliances.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition duration-300">Shop Now</a>
+</div>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+
+      <div class="bg-yellow-200 hover:bg-yellow-500 p-4 rounded shadow-md">
         <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="heels.jpg">
-        </a>
-        <div class="mt-4">
-              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Women's Heels</h2>
-              <p class="text-yellow-600 font-medium text-base leading-tight">KSh2,000</p>
-              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
-                View Shop
-              </a>
-              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
-                <i class="fas fa-star text-yellow-500 mr-1"></i>
-                <span>4.6 <span class="text-gray-500">(23)</span></span>
-              </div>
-            </div>
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="baby.jpg"></a>
+        <div class="mt-4 flex flex-col items-center text-center space-y-2">
+  <h2 class="text-gray-900 text-xl font-bold">Baby and Kids</h2>
+  <p class="text-gray-600 text-sm">Cute, comfy, and fun for every little one.</p>
+  <a href="appliances.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition duration-300">Shop Now</a>
+</div>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+
+      <div class="bg-yellow-200 hover:bg-yellow-500 p-4 rounded shadow-md">
         <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="airfryer.jpg">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="beauty.jpg">
         </a>
-        <div class="mt-4">
-              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Quality Airfryer</h2>
-              <p class="text-yellow-600 font-medium text-base leading-tight">KSh6,000</p>
-              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
-                View Shop
-              </a>
-              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
-                <i class="fas fa-star text-yellow-500 mr-1"></i>
-                <span>4.6 <span class="text-gray-500">(23)</span></span>
-              </div>
-            </div>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="mens.jpg">
-        </a>
-        <div class="mt-4">
-              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Men's Sneakers</h2>
-              <p class="text-yellow-600 font-medium text-base leading-tight">KSh3,500</p>
-              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
-                View Shop
-              </a>
-              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
-                <i class="fas fa-star text-yellow-500 mr-1"></i>
-                <span>4.6 <span class="text-gray-500">(23)</span></span>
-              </div>
-            </div>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="tops.jpg">
-        </a>
-        <div class="mt-4">
-              <h2 class="text-gray-900 text-lg font-semibold leading-tight">Bodysuit set of 6</h2>
-              <p class="text-yellow-600 font-medium text-base leading-tight">KSh3.500</p>
-              <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-3 py-1.5 rounded mt-1">
-                View Shop
-              </a>
-              <div class="flex items-center text-sm text-gray-700 font-medium mt-1">
-                <i class="fas fa-star text-yellow-500 mr-1"></i>
-                <span>4.6 <span class="text-gray-500">(23)</span></span>
-              </div>
-            </div>
+        <div class="mt-4 flex flex-col items-center text-center space-y-2">
+  <h2 class="text-gray-900 text-xl font-bold">Beauty and Personal Care</h2>
+  <p class="text-gray-600 text-sm">Glow up with trusted beauty and self-care essentials.</p>
+  <a href="appliances.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition duration-300">Shop Now</a>
+</div>
       </div>
     </div>
   </div>
